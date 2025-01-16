@@ -35,6 +35,11 @@ void topSort(int adj[][max],int num){
             j++;
         }
     }
+    for(int i=0;i<num;i++){
+        if(!sorted[i]){
+            printf("\nThe graph contains cycle!!!");
+        }
+    }
 }
 void main(){
     int num;

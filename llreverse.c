@@ -39,24 +39,22 @@ void display(){
         }
     }
 }
-
 void llreverse(){
     struct node *prev=NULL,*temp;
     current=head;
-    while (current!=NULL)
-    {
+    while(current!=NULL){
         temp=current->next;
         current->next=prev;
         prev=current;
         current=temp;
     }
     head=prev;
-}
+    display();
 
+}
 void main(){
     for(int i=0;i<5;i++)
     insertEnd();
     display();
     llreverse();
-    display();
 }
